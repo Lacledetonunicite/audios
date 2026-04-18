@@ -24,7 +24,6 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -313,31 +312,6 @@
       color: var(--texte-doux);
     }
 
-    /* Placeholder quand pas encore d'audio */
-    .audio-placeholder {
-      background: var(--beige);
-      border-radius: 12px;
-      padding: 1rem 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      color: var(--texte-doux);
-      font-size: 0.85rem;
-      font-style: italic;
-    }
-
-    .placeholder-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(122,154,122,0.15);
-      border: 1.5px dashed var(--vert);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
     /* ── Séparateur de section ── */
     .section-divider {
       position: relative;
@@ -354,48 +328,6 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--beige), transparent);
       margin-bottom: 1rem;
-    }
-
-    /* ── Section bonus ── */
-    .bonus-section {
-      background: linear-gradient(135deg, rgba(122,154,122,0.08), rgba(196,161,101,0.05));
-      border: 1px solid rgba(122,154,122,0.2);
-      border-radius: 20px;
-      padding: 2rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .bonus-header {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .bonus-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--or), #e8b870);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .bonus-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--or);
-    }
-
-    .bonus-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      color: var(--brun);
     }
 
     /* ── Footer ── */
@@ -490,12 +422,6 @@
         </div>
         <p class="audio-desc">Le point de départ de ton voyage. Julie t'accueille et t'explique comment utiliser ce livret pour en tirer le maximum.</p>
         <div class="player-wrapper">
-          <!-- Remplace src="#" par ton vrai fichier audio une fois uploadé -->
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir — remplace ce bloc par le lecteur une fois le fichier uploadé</span>
-          </div>
-          <!-- Décommente et remplace src quand l'audio est prêt :
           <div class="custom-player" data-audio="audio1">
             <button class="play-btn" onclick="togglePlay('audio1')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -509,9 +435,8 @@
                 <span id="dur-audio1">--:--</span>
               </div>
             </div>
-            <audio id="audio1" src="audios/audio1-bienvenue.mp3" preload="none"></audio>
+            <audio id="audio1" src="audios/01-bienvenue.m4a" preload="none"></audio>
           </div>
-          -->
         </div>
       </div>
 
@@ -527,9 +452,20 @@
         </div>
         <p class="audio-desc">Une méditation guidée pour apprendre à ressentir et reconnaître les réponses de ton centre sacral — avant de remplir ton premier tableau.</p>
         <div class="player-wrapper">
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir — remplace ce bloc par le lecteur une fois le fichier uploadé</span>
+          <div class="custom-player" data-audio="audio2">
+            <button class="play-btn" onclick="togglePlay('audio2')">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="player-controls">
+              <div class="progress-bar" onclick="seek(event, 'audio2')">
+                <div class="progress-fill" id="fill-audio2"></div>
+              </div>
+              <div class="time-row">
+                <span id="cur-audio2">0:00</span>
+                <span id="dur-audio2">--:--</span>
+              </div>
+            </div>
+            <audio id="audio2" src="audios/02-meditation-reconnexion-sacrale.m4a" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -546,9 +482,20 @@
         </div>
         <p class="audio-desc">Un espace de douceur et de pardon. Pour intégrer, sans te juger, les moments où tu t'es éloigné·e de toi-même.</p>
         <div class="player-wrapper">
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir — remplace ce bloc par le lecteur une fois le fichier uploadé</span>
+          <div class="custom-player" data-audio="audio3">
+            <button class="play-btn" onclick="togglePlay('audio3')">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="player-controls">
+              <div class="progress-bar" onclick="seek(event, 'audio3')">
+                <div class="progress-fill" id="fill-audio3"></div>
+              </div>
+              <div class="time-row">
+                <span id="cur-audio3">0:00</span>
+                <span id="dur-audio3">--:--</span>
+              </div>
+            </div>
+            <audio id="audio3" src="audios/03-accueillir-non-soi.m4a" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -565,9 +512,20 @@
         </div>
         <p class="audio-desc">Apprends à identifier où tu en es dans ta vague, et à reconnaître le bon moment pour prendre tes décisions importantes.</p>
         <div class="player-wrapper">
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir — remplace ce bloc par le lecteur une fois le fichier uploadé</span>
+          <div class="custom-player" data-audio="audio4">
+            <button class="play-btn" onclick="togglePlay('audio4')">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="player-controls">
+              <div class="progress-bar" onclick="seek(event, 'audio4')">
+                <div class="progress-fill" id="fill-audio4"></div>
+              </div>
+              <div class="time-row">
+                <span id="cur-audio4">0:00</span>
+                <span id="dur-audio4">--:--</span>
+              </div>
+            </div>
+            <audio id="audio4" src="audios/04-observer-sa-vague.m4a" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -584,9 +542,20 @@
         </div>
         <p class="audio-desc">Un dernier moment avec Julie pour célébrer le chemin parcouru et t'encourager à continuer à t'écouter.</p>
         <div class="player-wrapper">
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir — remplace ce bloc par le lecteur une fois le fichier uploadé</span>
+          <div class="custom-player" data-audio="audio5">
+            <button class="play-btn" onclick="togglePlay('audio5')">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="player-controls">
+              <div class="progress-bar" onclick="seek(event, 'audio5')">
+                <div class="progress-fill" id="fill-audio5"></div>
+              </div>
+              <div class="time-row">
+                <span id="cur-audio5">0:00</span>
+                <span id="dur-audio5">--:--</span>
+              </div>
+            </div>
+            <audio id="audio5" src="audios/05-cloture.m4a" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -600,157 +569,6 @@
       <div class="ornement-line"></div>
       <div class="ornement-dot"></div>
       <div class="ornement-line"></div>
-    </div>
-  </div>
-
-  <!-- SECTION VAGUES -->
-  <div class="section">
-    <p class="section-subtitle">Chapitre 2</p>
-    <h2 class="section-title">Les 4 audios de ta vague émotionnelle</h2>
-
-    <div class="audio-grid">
-
-      <div class="bonus-section">
-        <div class="bonus-header">
-          <div class="bonus-icon">🌊</div>
-          <div>
-            <p class="bonus-label">Vague individuelle</p>
-            <h3 class="bonus-title">Apprivoiser tes hauts et tes bas</h3>
-          </div>
-        </div>
-        <p style="font-size:0.9rem; color:var(--texte-doux); line-height:1.7; margin-bottom:1.2rem;">
-          Pour les moments où tu passes de la lumière à l'ombre sans raison apparente. Ta vague individuelle est ton radar le plus fin.
-        </p>
-        <div class="audio-placeholder">
-          <div class="placeholder-icon">🎵</div>
-          <span>Audio à venir · 5 min</span>
-        </div>
-      </div>
-
-      <div class="bonus-section">
-        <div class="bonus-header">
-          <div class="bonus-icon">🌊</div>
-          <div>
-            <p class="bonus-label">Vague tribale</p>
-            <h3 class="bonus-title">La pression qui s'accumule</h3>
-          </div>
-        </div>
-        <p style="font-size:0.9rem; color:var(--texte-doux); line-height:1.7; margin-bottom:1.2rem;">
-          Pour apprendre à libérer ce que tu portes pour les autres, avant que ça déborde.
-        </p>
-        <div class="audio-placeholder">
-          <div class="placeholder-icon">🎵</div>
-          <span>Audio à venir · 5 min</span>
-        </div>
-      </div>
-
-      <div class="bonus-section">
-        <div class="bonus-header">
-          <div class="bonus-icon">🌊</div>
-          <div>
-            <p class="bonus-label">Vague abstraite</p>
-            <h3 class="bonus-title">La clarté qui vient après</h3>
-          </div>
-        </div>
-        <p style="font-size:0.9rem; color:var(--texte-doux); line-height:1.7; margin-bottom:1.2rem;">
-          Pour celles et ceux qui apprennent en vivant. Ta clarté vient après — et c'est une sagesse profonde.
-        </p>
-        <div class="audio-placeholder">
-          <div class="placeholder-icon">🎵</div>
-          <span>Audio à venir · 5 min</span>
-        </div>
-      </div>
-
-      <div class="bonus-section">
-        <div class="bonus-header">
-          <div class="bonus-icon">🌊</div>
-          <div>
-            <p class="bonus-label">Vague du couple</p>
-            <h3 class="bonus-title">Les liens qui te touchent profondément</h3>
-          </div>
-        </div>
-        <p style="font-size:0.9rem; color:var(--texte-doux); line-height:1.7; margin-bottom:1.2rem;">
-          Pour revenir à toi dans tes relations. Tu mérites des liens qui te permettent d'être pleinement toi.
-        </p>
-        <div class="audio-placeholder">
-          <div class="placeholder-icon">🎵</div>
-          <span>Audio à venir · 5 min</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- SÉPARATEUR -->
-  <div class="section-divider">
-    <div class="ornement">
-      <div class="ornement-line"></div>
-      <div class="ornement-dot"></div>
-      <div class="ornement-line"></div>
-    </div>
-  </div>
-
-  <!-- SECTION MÉDITATIONS BONUS -->
-  <div class="section">
-    <p class="section-subtitle">Chapitre 3</p>
-    <h2 class="section-title">Tes méditations bonus</h2>
-
-    <div class="audio-grid">
-
-      <div class="audio-card">
-        <div class="audio-header">
-          <div class="audio-number" style="background: linear-gradient(135deg, var(--or), #c8902a);">✦</div>
-          <div class="audio-info">
-            <span class="audio-badge" style="color:var(--or);">Bonus — Autorité émotionnelle</span>
-            <h3 class="audio-title">Cohérence cardiaque</h3>
-            <span class="audio-duree">⏱ 5 min</span>
-          </div>
-        </div>
-        <p class="audio-desc">Crée un espace stable d'où observer ta vague. La respiration rythmée comme ancre dans les moments d'intensité émotionnelle.</p>
-        <div class="player-wrapper">
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir · 5 min</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="audio-card">
-        <div class="audio-header">
-          <div class="audio-number" style="background: linear-gradient(135deg, var(--or), #c8902a);">✦</div>
-          <div class="audio-info">
-            <span class="audio-badge" style="color:var(--or);">Bonus — Bienveillance</span>
-            <h3 class="audio-title">Metta — Se donner de l'amour</h3>
-            <span class="audio-duree">⏱ 6–8 min</span>
-          </div>
-        </div>
-        <p class="audio-desc">Une méditation de bienveillance aimante. Pour te pardonner d'avoir été "trop" — et te rappeler que ta sensibilité est ton superpouvoir.</p>
-        <div class="player-wrapper">
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir · 6–8 min</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="audio-card">
-        <div class="audio-header">
-          <div class="audio-number" style="background: linear-gradient(135deg, var(--or), #c8902a);">✦</div>
-          <div class="audio-info">
-            <span class="audio-badge" style="color:var(--or);">Bonus universel</span>
-            <h3 class="audio-title">Retour à soi — le bilan aligné</h3>
-            <span class="audio-duree">⏱ 8–10 min</span>
-          </div>
-        </div>
-        <p class="audio-desc">Un rituel du soir pour retrouver les moments d'alignement de ta journée. À pratiquer chaque soir pour ancrer ta connaissance de toi-même.</p>
-        <div class="player-wrapper">
-          <div class="audio-placeholder">
-            <div class="placeholder-icon">🎵</div>
-            <span>Audio à venir · 8–10 min</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 
