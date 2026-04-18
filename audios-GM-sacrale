@@ -1,8 +1,8 @@
 audio-gm-sacrale/
 ├── index.html
 └── audios/
-    ├── 01-bienvenue.m4a
-    ├── 02-meditation-reconnexion-sacrale.m4a
-    ├── 03-accueillir-non-soi.m4a
-    ├── 04-observer-sa-vague.m4a
-    └── 05-cloture.m4a
+src="audios/01-bienvenue.m4a"
+src="audios/02-meditation-reconnexion-sacrale.m4a"
+src="audios/03-accueillir-non-soi.m4a"
+src="audios/04-observer-sa-vague.m4a"
+src="audios/05-cloture.m4a"
