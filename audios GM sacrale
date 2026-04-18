@@ -1,10 +1,8 @@
-audio GM sacrale/
-├── index.html  
+audio-gm-sacrale/
+├── index.html
 └── audios/
-audio
-    ├──Bienvenue.m4a
-    ├──Meditation reconnexion au sacrale.m4a
-    ├──Accueillir le non soi sans jugement.m4a
-    ├──Observer sa vague.m4a
-    ├──Cloture.m4a 
-    
+    ├── 01-bienvenue.m4a
+    ├── 02-meditation-reconnexion-sacrale.m4a
+    ├── 03-accueillir-non-soi.m4a
+    ├── 04-observer-sa-vague.m4a
+    └── 05-cloture.m4a
