@@ -490,10 +490,12 @@
         </div>
         <p class="audio-desc">Le point de départ de ton voyage. Julie t'accueille et t'explique comment utiliser ce livret pour en tirer le maximum.</p>
         <div class="player-wrapper">
-         Bienvenu[1].m4a
+          <!-- Remplace src="#" par ton vrai fichier audio une fois uploadé -->
+          <div class="audio-placeholder">
             <div class="placeholder-icon">🎵</div>
             <span>Audio à venir — remplace ce bloc par le lecteur une fois le fichier uploadé</span>
           </div>
+          <!-- Décommente et remplace src quand l'audio est prêt :
           <div class="custom-player" data-audio="audio1">
             <button class="play-btn" onclick="togglePlay('audio1')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -507,7 +509,7 @@
                 <span id="dur-audio1">--:--</span>
               </div>
             </div>
-            <audio id="audio1" Bienvenu[1].m4a preload="none"></audio>
+            <audio id="audio1" src="audios/audio1-bienvenue.mp3" preload="none"></audio>
           </div>
           -->
         </div>
