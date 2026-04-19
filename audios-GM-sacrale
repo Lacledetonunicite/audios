@@ -1,6 +1,6 @@
 audio-GM-Sacrale/
 ├── index.html
-├──type nul > .nojekyll
+├──.nojekyll
 Jekyll
 └── audios/
     ├── 01-bienvenue.m4a
