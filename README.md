@@ -415,8 +415,8 @@
         <div class="audio-header">
           <div class="audio-number">1</div>
           <div class="audio-info">
-            <span class="audio-badge">Bienvenue</span>
-            <h3 class="audio-title">Bienvenue dans ton univers</h3>
+            <span class="audio-badge">Bienvenu</span>
+            <h3 class="audio-title">Bienvenu dans ton univers</h3>
             <span class="audio-duree">⏱ 3–4 min</span>
           </div>
         </div>
@@ -435,7 +435,7 @@
                 <span id="dur-audio1">--:--</span>
               </div>
             </div>
-            <audio id="audio1" src="audios/01-bienvenue.m4a" preload="none"></audio>
+            <audio id="audio1" src="audios/01-bienvenu.mp3" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -465,7 +465,7 @@
                 <span id="dur-audio2">--:--</span>
               </div>
             </div>
-            <audio id="audio2" src="audios/02-meditation-reconnexion-sacrale.m4a" preload="none"></audio>
+            <audio id="audio2" src="audios/02-connexionsacrale.mp3" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -495,7 +495,7 @@
                 <span id="dur-audio3">--:--</span>
               </div>
             </div>
-            <audio id="audio3" src="audios/03-accueillir-non-soi.m4a" preload="none"></audio>
+            <audio id="audio3" src="audios/03-nonsoi.mp3" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -525,7 +525,7 @@
                 <span id="dur-audio4">--:--</span>
               </div>
             </div>
-            <audio id="audio4" src="audios/04-observer-sa-vague.m4a" preload="none"></audio>
+            <audio id="audio4" src="audios/04-vague.mp3" preload="none"></audio>
           </div>
         </div>
       </div>
@@ -555,7 +555,7 @@
                 <span id="dur-audio5">--:--</span>
               </div>
             </div>
-            <audio id="audio5" src="audios/05-cloture.m4a" preload="none"></audio>
+            <audio id="audio5" src="audios/05-cloture.mp3" preload="none"></audio>
           </div>
         </div>
       </div>
