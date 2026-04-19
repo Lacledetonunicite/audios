@@ -3,8 +3,8 @@ audio-GM-Sacrale/
 ├──.nojekyll
 Jekyll
 └── audios/
-    ├── 01-bienvenue.m4a
-    ├── 02-meditation-reconnexion-sacrale.m4a
-    ├── 03-accueillir-non-soi.m4a
-    ├── 04-observer-sa-vague.m4a
-    └── 05-cloture.m4a
+    ├── 01-bienvenue.mp3
+    ├── 02-reconnexionsacrale.mp3
+    ├── 03-nonsoi.mp3
+    ├── 04-vague.mp3
+    └── 05-cloture.mp3
